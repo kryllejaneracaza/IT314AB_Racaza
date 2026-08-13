@@ -4,6 +4,36 @@ void main() {
   runApp(const MyApp());
 }
 
+String? name1 = "Krylle Jane";
+String? course1 = "BSIT - 3";
+int? age1 = 20;
+String? hobby1 = null;
+String? image1 = "assets/profile1.png";
+
+String? name2 = "Kayra Ylaya";
+String? course2 = "BSHM - 2";
+int? age2 = 19;
+String? hobby2 = "Dancing";
+String? image2 = "assets/profile2.png";
+
+String? name3 = "Kristine Ybanez";
+String? course3 = null;
+int? age3 = 18;
+String? hobby3 = "Gaming";
+String? image3 = "assets/profile3.png";
+
+String? name4 = "Maria Cristina";
+String? course4 = "BSTM - 4";
+int? age4 = 21;
+String? hobby4 = "Reading";
+String? image4 = "assets/profile4.png";
+
+String? name5 = "Anna Belle";
+String? course5 = "BSIS - 3";
+int? age5 = null;
+String? hobby5 = "Reading";
+String? image5 = "assets/profile5.png";
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -11,166 +41,160 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Sunflower Flutter App',
+      title: 'Five Profiles',
       home: Scaffold(
         backgroundColor: const Color(0xFFFFF8E7),
 
         appBar: AppBar(
-          backgroundColor: const Color(0xFFF4C430),
-          title: const Text(
-            '🌻 My First Flutter Application 🌻',
-          ),
+          title: const Text("My Profiles"),
+          backgroundColor: Colors.amber,
+          centerTitle: true,
         ),
 
         body: SingleChildScrollView(
-          child: Card(
-            margin: const EdgeInsets.all(15),
-            child: Padding(
-              padding: const EdgeInsets.all(20),
+          child: Column(
+            children: [
 
-              child: Column(
-                children: [
-
-                  ClipOval(
-                    child: Image.asset(
-                      'assets/sunflower.png',
-                      width: 120,
-                      height: 120,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-
-                  const SizedBox(height: 10),
-
-                  const Text(
-                    'My First Flutter Application',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontStyle: FontStyle.italic,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-
-                  const SizedBox(height: 10),
-
-                  const Text(
-                    'Krylle Jane Y. Racaza',
-                    style: TextStyle(
-                      fontSize: 23,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-
-                  const SizedBox(height: 8),
-
-                  const Text(
-                    'BSIT - 3',
-                    style: TextStyle(fontSize: 20),
-                  ),
-
-                  const SizedBox(height: 8),
-
-                  const Text(
-                    'August 11, 2026',
-                    style: TextStyle(fontSize: 15),
-                  ),
-
-                  const SizedBox(height: 10),
-
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Flexible(
-                        child: Text(
-                          'Beauty and the Beast',
-                          style: TextStyle(fontSize: 18),
-                          textAlign: TextAlign.center,
+              Card(
+                margin: const EdgeInsets.all(12),
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        image1 ?? "Not provided",
+                        height: 120,
+                        width: 120,
+                        fit: BoxFit.cover,
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                        name1 ?? "Not provided",
+                        style: const TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
-
-                      SizedBox(width: 10),
-
-                      Text(
-                        'Belle',
-                        style: TextStyle(fontSize: 18),
-                      ),
+                      Text("Course: ${course1 ?? "Not provided"}"),
+                      Text("Age: ${age1 ?? "Not provided"}"),
+                      Text("Hobby: ${hobby1 ?? "Not provided"}"),
                     ],
                   ),
-
-                  const Divider(),
-
-                  Card(
-                    margin: const EdgeInsets.all(10),
-                    child: Padding(
-                      padding: const EdgeInsets.all(20),
-
-                      child: Column(
-                        children: [
-
-                          const Text(
-                            'My Favorites',
-                            style: TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-
-                          const SizedBox(height: 10),
-
-                          const Text(
-                            'Wattpad',
-                            style: TextStyle(fontSize: 20),
-                          ),
-
-                          const SizedBox(height: 8),
-
-                          const Text(
-                            'French Fries',
-                            style: TextStyle(fontSize: 20),
-                          ),
-
-                          const SizedBox(height: 8),
-
-                          const Text(
-                            'Tangled',
-                            style: TextStyle(fontSize: 20),
-                          ),
-
-                          const SizedBox(height: 8),
-
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Text(
-                                'Yellow',
-                                style: TextStyle(fontSize: 18),
-                              ),
-
-                              SizedBox(width: 10),
-
-                              Text(
-                                'White',
-                                style: TextStyle(fontSize: 18),
-                              ),
-                            ],
-                          ),
-
-                          const SizedBox(height: 15),
-
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: const Text(
-                              'Click to know more',
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
+                ),
               ),
-            ),
+
+              Card(
+                margin: const EdgeInsets.all(12),
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        image2 ?? "Not provided",
+                        height: 120,
+                        width: 120,
+                        fit: BoxFit.cover,
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                        name2 ?? "not provided",
+                        style: const TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text("Course: ${course2 ?? "Not provided"}"),
+                      Text("Age: ${age2 ?? "Not provided"}"),
+                      Text("Hobby: ${hobby2 ?? "Not provided"}"),
+                    ],
+                  ),
+                ),
+              ),
+
+              Card(
+                margin: const EdgeInsets.all(12),
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        image3 ?? "Not provided",
+                        height: 120,
+                        width: 120,
+                        fit: BoxFit.cover,
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                        name3 ?? "not provided",
+                        style: const TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text("Course: ${course3 ?? "Not provided"}"),
+                      Text("Age: ${age3 ?? "Not provided"}"),
+                      Text("Hobby: ${hobby3 ?? "Not provided"}"),
+                    ],
+                  ),
+                ),
+              ),
+
+              Card(
+                margin: const EdgeInsets.all(12),
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        image4 ?? "Not provided",
+                        height: 120,
+                        width: 120,
+                        fit: BoxFit.cover,
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                        name4 ?? "not provided",
+                        style: const TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                     Text("Course: ${course4 ?? "Not provided"}"),
+                      Text("Age: ${age4 ?? "Not provided"}"),
+                      Text("Hobby: ${hobby4 ?? "Not provided"}"),
+                    ],
+                  ),
+                ),
+              ),
+
+              Card(
+                margin: const EdgeInsets.all(12),
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        image5 ?? "Not provided",
+                        height: 120,
+                        width: 120,
+                        fit: BoxFit.cover,
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                        name5 ?? "not provided",
+                        style: const TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text("Course: ${course5 ?? "Not provided"}"),
+                      Text("Age: ${age5 ?? "Not provided"}"),
+                      Text("Hobby: ${hobby5 ?? "Not provided"}"),
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),
