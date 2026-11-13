@@ -12,7 +12,7 @@ List<Map<String, dynamic>> defaultStudents() {
   return [
     {
       'image': 'assets/profile1.png',
-      'name': 'Krylle Jane - xxs',
+      'name': 'XOXO',
       'course': 'BSIT',
       'year': '3rd Year',
       'age': 20,
