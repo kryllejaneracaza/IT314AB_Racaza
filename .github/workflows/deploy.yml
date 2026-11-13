@@ -1,4 +1,4 @@
-name: Deploy Flutter Web to Lightsail
+name: Deploy Flutter Web to 
 
 on:
   push:
