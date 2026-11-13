@@ -51,7 +51,7 @@ List<Map<String, dynamic>> defaultStudents() {
     },
     {
       'image': 'assets/profile4.png',
-      'name': 'John Cruz',
+      'name': 'John Dela Cruz',
       'course': 'BSCS',
       'year': '2nd Year',
       'age': 20,
